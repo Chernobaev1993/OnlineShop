@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',  # Для flatpage
     'django.contrib.flatpages',  # Для flatpage
     'fpages',  # Админка для flatpages
+    'shop.apps.ShopConfig',  # Для приложения shop
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1  # Дополнительная переменная для flatpage
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Две переменные для медиафайлов
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
